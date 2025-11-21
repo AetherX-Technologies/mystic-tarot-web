@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}单卡占卜{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4">单卡占卜</h2>
+
+<div class="reading-result text-center">
+    <div class="mb-4">
+        <img src="{{ url_for('static', filename=card['image']) }}"
+             alt="{{ card['name'] }}"
+             class="tarot-card-img {% if reversed %}reversed{% endif %}"
+             style="max-width: 300px;">
+    </div>
+
+    <h3 class="card-name">{{ card['name'] }}</h3>
+    <p class="card-orientation">
+        {% if reversed %}
+            逆位 (Reversed)
+        {% else %}
+            正位 (Upright)
+        {% endif %}
+    </p>
+
+    <hr>
+
+    <div class="text-start">
+        <h5>解读：</h5>
+        <p>{{ card['rdesc'] if reversed else card['desc'] }}</p>
+
+        {% if card['message'] %}
+        <h5>核心信息：</h5>
+        <p>{{ card['message'] }}</p>
+        {% endif %}
+
+        {% if card['meditation'] %}
+        <h5>冥想文本：</h5>
+        <p><em>{{ card['meditation'] }}</em></p>
+        {% endif %}
+    </div>
+
+    <div class="mt-4">
+        <a href="/one-card" class="btn btn-primary">重新抽牌</a>
+        <a href="/" class="btn btn-outline-secondary">返回首页</a>
+    </div>
+</div>
+{% endblock %}

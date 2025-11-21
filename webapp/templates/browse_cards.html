@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}浏览牌库{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4">塔罗牌库</h2>
+
+<!-- 分类标签 -->
+<ul class="nav nav-tabs mb-4" id="cardTypeTabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="tab" href="#all">全部 (78)</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#major">大阿卡纳 (22)</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#minor">小阿卡纳 (56)</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <!-- 全部牌 -->
+    <div class="tab-pane fade show active" id="all">
+        <div class="row">
+            {% for card in cards %}
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename=card['image']) }}"
+                         class="card-img-top" alt="{{ card['name'] }}">
+                    <div class="card-body text-center">
+                        <h6>{{ card['name'] }}</h6>
+                        <a href="/card/{{ card['url'] }}" class="btn btn-sm btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- 大阿卡纳 -->
+    <div class="tab-pane fade" id="major">
+        <div class="row">
+            {% for card in cards if card['cardtype'] == 'major' %}
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename=card['image']) }}"
+                         class="card-img-top" alt="{{ card['name'] }}">
+                    <div class="card-body text-center">
+                        <h6>{{ card['name'] }}</h6>
+                        <a href="/card/{{ card['url'] }}" class="btn btn-sm btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- 小阿卡纳 -->
+    <div class="tab-pane fade" id="minor">
+        <div class="row">
+            {% for card in cards if card['cardtype'] != 'major' %}
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename=card['image']) }}"
+                         class="card-img-top" alt="{{ card['name'] }}">
+                    <div class="card-body text-center">
+                        <h6>{{ card['name'] }}</h6>
+                        <a href="/card/{{ card['url'] }}" class="btn btn-sm btn-outline-primary">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

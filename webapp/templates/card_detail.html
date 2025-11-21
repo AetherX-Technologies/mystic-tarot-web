@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}{{ card['name'] }} - 牌详情{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4 text-center">
+        <img src="{{ url_for('static', filename=card['image']) }}"
+             alt="{{ card['name'] }}"
+             class="tarot-card-img mb-3"
+             style="max-width: 100%;">
+
+        <!-- 导航按钮 -->
+        <div class="d-flex justify-content-between mt-3">
+            {% if prev_card %}
+            <a href="/card/{{ prev_card['url'] }}" class="btn btn-outline-secondary">
+                ← {{ prev_card['name'] }}
+            </a>
+            {% else %}
+            <span></span>
+            {% endif %}
+
+            {% if next_card %}
+            <a href="/card/{{ next_card['url'] }}" class="btn btn-outline-secondary">
+                {{ next_card['name'] }} →
+            </a>
+            {% else %}
+            <span></span>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <h2>{{ card['name'] }}</h2>
+        <p class="text-muted">序列: {{ card['sequence'] }} | 类型: {{ card['cardtype']|upper }}</p>
+
+        <hr>
+
+        <h4>正位解读</h4>
+        <p>{{ card['desc'] }}</p>
+
+        <h4>逆位解读</h4>
+        <p>{{ card['rdesc'] }}</p>
+
+        {% if card['message'] %}
+        <h4>核心信息</h4>
+        <p>{{ card['message'] }}</p>
+        {% endif %}
+
+        {% if card['qabalah'] %}
+        <h4>Qabalah路径</h4>
+        <p>{{ card['qabalah'] }}</p>
+        {% endif %}
+
+        {% if card['hebrew_letter'] %}
+        <h4>希伯来字母</h4>
+        <p style="font-size: 2rem;">{{ card['hebrew_letter'] }}</p>
+        {% endif %}
+
+        {% if card['meditation'] %}
+        <h4>冥想文本</h4>
+        <p><em>{{ card['meditation'] }}</em></p>
+        {% endif %}
+
+        <hr>
+
+        <a href="/browse" class="btn btn-primary">返回牌库</a>
+        <a href="/" class="btn btn-outline-secondary">返回首页</a>
+    </div>
+</div>
+{% endblock %}

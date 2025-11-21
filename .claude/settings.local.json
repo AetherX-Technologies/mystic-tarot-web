@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(move TarotCardsIntroduction.txt files )",
+      "Bash(move TarotCardsUpright.csv files )",
+      "Bash(move TarotCardsReversed.csv files)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(python scripts/extract_cards.py:*)",
+      "Bash(python scripts/validate_data.py:*)",
+      "Bash(test:*)",
+      "Bash(conda info:*)",
+      "Bash(conda run:*)",
+      "Bash(tree:*)",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

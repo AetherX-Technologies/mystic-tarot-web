@@ -1,0 +1,122 @@
+/* 塔罗牌占卜平台 - 自定义样式 */
+
+/* CSS变量 */
+:root {
+    --primary-color: #6f42c1;
+    --secondary-color: #ffc107;
+    --dark-bg: #2c3e50;
+    --light-bg: #ecf0f1;
+}
+
+/* 全局样式 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+}
+
+/* 导航栏 */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* 首页Hero区域 */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* 卡片选项样式 */
+.card-option {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* 塔罗牌图片样式 */
+.tarot-card-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 占卜结果区域 */
+.reading-result {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 卡牌位置标签 */
+.card-position {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* 卡牌名称 */
+.card-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 卡牌正逆位状态 */
+.card-orientation {
+    color: #dc3545;
+    font-style: italic;
+}
+
+/* 逆位牌图片旋转 */
+.reversed {
+    transform: rotate(180deg);
+}
+
+/* 普通卡片样式 */
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* 按钮样式 */
+.btn {
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* 页脚 */
+footer {
+    margin-top: 50px;
+    background-color: var(--dark-bg);
+    color: white;
+}
+
+/* 标题样式 */
+.display-4 {
+    color: #343a40;
+    font-weight: 600;
+}
+
+.lead {
+    color: #6c757d;
+}

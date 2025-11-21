@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}首页 - 塔罗牌占卜{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <h1 class="display-4">欢迎来到塔罗牌占卜平台</h1>
+    <p class="lead">探索78张神秘塔罗牌的智慧，寻找内心的答案</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card card-option h-100">
+            <div class="card-body text-center">
+                <h3 class="card-title">单卡占卜</h3>
+                <p class="card-text">快速获取一天的指引，适合每日占卜</p>
+                <a href="/one-card" class="btn btn-primary">开始</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card card-option h-100">
+            <div class="card-body text-center">
+                <h3 class="card-title">三卡占卜</h3>
+                <p class="card-text">过去-现在-未来，洞察事件发展脉络</p>
+                <a href="/three-cards" class="btn btn-primary">开始</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card card-option h-100">
+            <div class="card-body text-center">
+                <h3 class="card-title">六卡通用占卜</h3>
+                <p class="card-text">全方位分析当前状态与未来走向</p>
+                <a href="/six-cards" class="btn btn-primary">开始</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6 offset-md-3 text-center">
+        <div class="card">
+            <div class="card-body">
+                <h4>学习塔罗</h4>
+                <p>浏览完整的78张塔罗牌库，学习每张牌的含义</p>
+                <a href="/browse" class="btn btn-outline-primary">浏览牌库</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

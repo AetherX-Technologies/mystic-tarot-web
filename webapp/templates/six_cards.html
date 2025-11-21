@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}六卡通用占卜{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4">六卡通用占卜</h2>
+
+<div class="row">
+    {% for reading in readings %}
+    <div class="col-md-6 mb-4">
+        <div class="reading-result">
+            <p class="card-position">{{ reading['position'] }}</p>
+            <div class="text-center mb-3">
+                <img src="{{ url_for('static', filename=reading['card']['image']) }}"
+                     alt="{{ reading['card']['name'] }}"
+                     class="tarot-card-img {% if reading['reversed'] %}reversed{% endif %}"
+                     style="max-width: 150px;">
+            </div>
+            <h5 class="card-name">{{ reading['card']['name'] }}</h5>
+            <p class="card-orientation">
+                {% if reading['reversed'] %}逆位{% else %}正位{% endif %}
+            </p>
+            <p>{{ reading['card']['rdesc'] if reading['reversed'] else reading['card']['desc'] }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="text-center mt-4">
+    <a href="/six-cards" class="btn btn-primary">重新抽牌</a>
+    <a href="/" class="btn btn-outline-secondary">返回首页</a>
+</div>
+{% endblock %}

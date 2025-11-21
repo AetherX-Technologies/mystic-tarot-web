@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}三卡占卜{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4">三卡占卜 - 过去·现在·未来</h2>
+
+{% for reading in readings %}
+<div class="reading-result">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="{{ url_for('static', filename=reading['card']['image']) }}"
+                 alt="{{ reading['card']['name'] }}"
+                 class="tarot-card-img {% if reading['reversed'] %}reversed{% endif %}"
+                 style="max-width: 200px;">
+        </div>
+        <div class="col-md-8">
+            <p class="card-position">{{ reading['position'] }}</p>
+            <h4 class="card-name">{{ reading['card']['name'] }}</h4>
+            <p class="card-orientation">
+                {% if reading['reversed'] %}逆位{% else %}正位{% endif %}
+            </p>
+            <hr>
+            <p>{{ reading['card']['rdesc'] if reading['reversed'] else reading['card']['desc'] }}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<div class="text-center mt-4">
+    <a href="/three-cards" class="btn btn-primary">重新抽牌</a>
+    <a href="/" class="btn btn-outline-secondary">返回首页</a>
+</div>
+{% endblock %}

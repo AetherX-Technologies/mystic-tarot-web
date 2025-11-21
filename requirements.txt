@@ -1,0 +1,13 @@
+# 核心依赖
+Flask==2.3.0
+pandas==2.0.0
+numpy>=1.21.0,<2.0  # pandas 2.0.0兼容的numpy版本
+python-dotenv==1.0.0
+
+# 生产环境
+gunicorn==21.2.0
+
+# 开发工具（可选）
+pytest==7.4.0
+black==23.7.0
+flake8==6.1.0
