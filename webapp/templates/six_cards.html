@@ -1,33 +1,39 @@
 {% extends "base.html" %}
 
-{% block title %}六卡通用占卜{% endblock %}
+{% block title %}Six Card Spread{% endblock %}
 
 {% block content %}
-<h2 class="text-center mb-4">六卡通用占卜</h2>
+<div class="text-center mb-5 animate-up">
+    <h2>COMPREHENSIVE ANALYSIS</h2>
+    <p class="text-secondary">Deep dive into your current state and path</p>
+</div>
 
 <div class="row">
     {% for reading in readings %}
     <div class="col-md-6 mb-4">
-        <div class="reading-result">
-            <p class="card-position">{{ reading['position'] }}</p>
+        <div class="reading-result h-100 p-4 animate-up delay-{{ loop.index }}">
             <div class="text-center mb-3">
                 <img src="{{ url_for('static', filename=reading['card']['image']) }}"
                      alt="{{ reading['card']['name'] }}"
                      class="tarot-card-img {% if reading['reversed'] %}reversed{% endif %}"
                      style="max-width: 150px;">
             </div>
-            <h5 class="card-name">{{ reading['card']['name'] }}</h5>
-            <p class="card-orientation">
-                {% if reading['reversed'] %}逆位{% else %}正位{% endif %}
+            
+            <p class="card-position text-center w-100">{{ reading['position'] }}</p>
+            <h4 class="text-center text-white mb-1">{{ reading['card']['name'] }}</h4>
+            <p class="card-orientation text-center">
+                {% if reading['reversed'] %}Reversed{% else %}Upright{% endif %}
             </p>
-            <p>{{ reading['card']['rdesc'] if reading['reversed'] else reading['card']['desc'] }}</p>
+            
+            <hr class="border-secondary my-3">
+            <p class="small text-secondary">{{ reading['card']['rdesc'] if reading['reversed'] else reading['card']['desc'] }}</p>
         </div>
     </div>
     {% endfor %}
 </div>
 
-<div class="text-center mt-4">
-    <a href="/six-cards" class="btn btn-primary">重新抽牌</a>
-    <a href="/" class="btn btn-outline-secondary">返回首页</a>
+<div class="text-center mt-4 mb-5 animate-up delay-6">
+    <a href="/six-cards" class="btn btn-gold me-3">New Reading</a>
+    <a href="/" class="btn btn-outline-gold">Return Home</a>
 </div>
 {% endblock %}

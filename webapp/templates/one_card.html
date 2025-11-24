@@ -1,47 +1,54 @@
 {% extends "base.html" %}
 
-{% block title %}单卡占卜{% endblock %}
+{% block title %}Daily Insight{% endblock %}
 
 {% block content %}
-<h2 class="text-center mb-4">单卡占卜</h2>
+<div class="text-center mb-5 animate-up">
+    <h2>DAILY INSIGHT</h2>
+    <p class="text-secondary">Your guiding light for the day</p>
+</div>
 
-<div class="reading-result text-center">
-    <div class="mb-4">
-        <img src="{{ url_for('static', filename=card['image']) }}"
-             alt="{{ card['name'] }}"
-             class="tarot-card-img {% if reversed %}reversed{% endif %}"
-             style="max-width: 300px;">
-    </div>
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="reading-result text-center animate-up delay-1">
+            <div class="mb-4">
+                <img src="{{ url_for('static', filename=card['image']) }}"
+                     alt="{{ card['name'] }}"
+                     class="tarot-card-img {% if reversed %}reversed{% endif %}"
+                     style="max-width: 300px;">
+            </div>
 
-    <h3 class="card-name">{{ card['name'] }}</h3>
-    <p class="card-orientation">
-        {% if reversed %}
-            逆位 (Reversed)
-        {% else %}
-            正位 (Upright)
-        {% endif %}
-    </p>
+            <h3 class="card-name">{{ card['name'] }}</h3>
+            <p class="card-orientation">
+                {% if reversed %}
+                    Reversed
+                {% else %}
+                    Upright
+                {% endif %}
+            </p>
 
-    <hr>
+            <hr class="border-secondary my-4 w-50 mx-auto">
 
-    <div class="text-start">
-        <h5>解读：</h5>
-        <p>{{ card['rdesc'] if reversed else card['desc'] }}</p>
+            <div class="text-start px-md-5">
+                <h4>Interpretation</h4>
+                <p>{{ card['rdesc'] if reversed else card['desc'] }}</p>
 
-        {% if card['message'] %}
-        <h5>核心信息：</h5>
-        <p>{{ card['message'] }}</p>
-        {% endif %}
+                {% if card['message'] %}
+                <h4 class="mt-4">Core Message</h4>
+                <p>{{ card['message'] }}</p>
+                {% endif %}
 
-        {% if card['meditation'] %}
-        <h5>冥想文本：</h5>
-        <p><em>{{ card['meditation'] }}</em></p>
-        {% endif %}
-    </div>
+                {% if card['meditation'] and card['sequence'] != 15 %}
+                <h4 class="mt-4">Meditation</h4>
+                <p class="text-muted"><em>"{{ card['meditation'] }}"</em></p>
+                {% endif %}
+            </div>
 
-    <div class="mt-4">
-        <a href="/one-card" class="btn btn-primary">重新抽牌</a>
-        <a href="/" class="btn btn-outline-secondary">返回首页</a>
+            <div class="mt-5">
+                <a href="/one-card" class="btn btn-gold me-3">Draw Again</a>
+                <a href="/" class="btn btn-outline-gold">Return Home</a>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

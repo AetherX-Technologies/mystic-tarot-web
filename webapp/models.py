@@ -26,6 +26,8 @@ class CardManager:
     def load_cards(self):
         """加载塔罗牌数据"""
         self.df = pd.read_csv(self.csv_path)
+        # 将NaN替换为空字符串
+        self.df = self.df.fillna('')
         # 转换为字典列表
         self.cards = self.df.to_dict('records')
 
@@ -112,9 +114,9 @@ class ReadingEngine:
         random.shuffle(orientations)
 
         result = [
-            {'position': '过去 (The Past)', 'card': selected[0], 'reversed': orientations[0]},
-            {'position': '现在 (The Present)', 'card': selected[1], 'reversed': orientations[1]},
-            {'position': '未来 (The Future)', 'card': selected[2], 'reversed': orientations[2]},
+            {'position': 'The Past', 'card': selected[0], 'reversed': orientations[0]},
+            {'position': 'The Present', 'card': selected[1], 'reversed': orientations[1]},
+            {'position': 'The Future', 'card': selected[2], 'reversed': orientations[2]},
         ]
 
         return result
@@ -134,12 +136,12 @@ class ReadingEngine:
         random.shuffle(orientations)
 
         positions = [
-            '你对自己的感受 (How you feel about yourself)',
-            '你最想要的东西 (What you want most right now)',
-            '你的恐惧 (Your fears)',
-            '对你有利的因素 (What is going for you)',
-            '对你不利的因素 (What is going against you)',
-            '可能的结果 (The likely outcome)',
+            'How you feel about yourself',
+            'What you want most right now',
+            'Your fears',
+            'What is going for you',
+            'What is going against you',
+            'The likely outcome',
         ]
 
         result = []
