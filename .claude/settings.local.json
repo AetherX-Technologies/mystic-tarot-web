@@ -13,7 +13,15 @@
       "Bash(tree:*)",
       "Bash(git init:*)",
       "Bash(git config:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(python:*)",
+      "WebSearch",
+      "WebFetch(domain:labyrinthos.co)",
+      "WebFetch(domain:www.learntarot.com)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git reset:*)"
     ],
     "deny": [],
     "ask": []
