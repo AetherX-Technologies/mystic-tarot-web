@@ -7,7 +7,7 @@
     <div class="col-md-4 text-center">
         <img src="{{ url_for('static', filename=card['image']) }}"
              alt="{{ card['name'] }}"
-             class="tarot-card-img mb-3"
+             class="tarot-card-img levitate mb-3"
              loading="lazy">
 
         <!-- Navigation -->
@@ -32,20 +32,26 @@
 
     <div class="col-md-7">
         <div class="reading-result">
-            <h2 class="card-name">{{ card['name'] }}</h2>
-            <p class="card-meta">Sequence: {{ card['sequence'] }} | Type: {{ card['cardtype']|upper }}</p>
+            <h2 class="card-name animate-up delay-1">{{ card['name'] }}</h2>
+            <p class="card-meta animate-up delay-1">Sequence: {{ card['sequence'] }} | Type: {{ card['cardtype']|upper }}</p>
 
-            <hr class="border-secondary my-4">
+            <hr class="border-secondary my-4 animate-up delay-2">
 
-            <h4>Upright Meaning</h4>
-            <p>{{ card['desc'] }}</p>
+            <div class="animate-up delay-2">
+                <h4>Upright Meaning</h4>
+                <p>{{ card['desc'] }}</p>
+            </div>
 
-            <h4 class="mt-4">Reversed Meaning</h4>
-            <p>{{ card['rdesc'] }}</p>
+            <div class="animate-up delay-3">
+                <h4 class="mt-4">Reversed Meaning</h4>
+                <p>{{ card['rdesc'] }}</p>
+            </div>
 
             {% if card['message'] %}
-            <h4 class="mt-4">Core Message</h4>
-            <p>{{ card['message'] }}</p>
+            <div class="animate-up delay-4">
+                <h4 class="mt-4">Core Message</h4>
+                <p>{{ card['message'] }}</p>
+            </div>
             {% endif %}
 
             {% if card['qabalah'] %}

@@ -14,12 +14,12 @@
             <div class="mb-4">
                 <img src="{{ url_for('static', filename=card['image']) }}"
                      alt="{{ card['name'] }}"
-                     class="tarot-card-img {% if reversed %}reversed{% endif %}"
+                     class="tarot-card-img levitate {% if reversed %}reversed{% endif %}"
                      style="max-width: 300px;">
             </div>
 
-            <h3 class="card-name">{{ card['name'] }}</h3>
-            <p class="card-orientation">
+            <h3 class="card-name animate-up delay-1">{{ card['name'] }}</h3>
+            <p class="card-orientation animate-up delay-1">
                 {% if reversed %}
                     Reversed
                 {% else %}
@@ -27,20 +27,26 @@
                 {% endif %}
             </p>
 
-            <hr class="border-secondary my-4 w-50 mx-auto">
+            <hr class="border-secondary my-4 w-50 mx-auto animate-up delay-2">
 
             <div class="text-start px-md-5">
-                <h4>Interpretation</h4>
-                <p>{{ card['rdesc'] if reversed else card['desc'] }}</p>
+                <div class="animate-up delay-2">
+                    <h4>Interpretation</h4>
+                    <p>{{ card['rdesc'] if reversed else card['desc'] }}</p>
+                </div>
 
                 {% if card['message'] %}
-                <h4 class="mt-4">Core Message</h4>
-                <p>{{ card['message'] }}</p>
+                <div class="animate-up delay-3">
+                    <h4 class="mt-4">Core Message</h4>
+                    <p>{{ card['message'] }}</p>
+                </div>
                 {% endif %}
 
                 {% if card['meditation'] and card['sequence'] != 15 %}
-                <h4 class="mt-4">Meditation</h4>
-                <p class="text-muted"><em>"{{ card['meditation'] }}"</em></p>
+                <div class="animate-up delay-4">
+                    <h4 class="mt-4">Meditation</h4>
+                    <p class="text-muted"><em>"{{ card['meditation'] }}"</em></p>
+                </div>
                 {% endif %}
             </div>
 
