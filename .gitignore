@@ -37,6 +37,7 @@ instance/
 # IDE
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo
 *~
@@ -57,3 +58,13 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Documentation (not deployed)
+docs/
+
+# Development scripts (not deployed)
+analyze_data.py
+compare_fields.py
+message_analysis.py
+field_analysis.txt
+test_unicode.html
