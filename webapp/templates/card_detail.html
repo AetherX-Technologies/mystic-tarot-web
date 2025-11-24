@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ card['name'] }} - Detail{% endblock %}
+{% block title %}{{ card['name'] }} - {{ _('Detail') }}{% endblock %}
 
 {% block content %}
 <div class="row justify-content-center">
@@ -14,7 +14,7 @@
         <div class="d-flex justify-content-between mt-3 px-2">
             {% if prev_card %}
             <a href="/card/{{ prev_card['url'] }}" class="btn btn-outline-secondary btn-sm">
-                &larr; Previous
+                &larr; {{ _('Previous') }}
             </a>
             {% else %}
             <span></span>
@@ -22,7 +22,7 @@
 
             {% if next_card %}
             <a href="/card/{{ next_card['url'] }}" class="btn btn-outline-secondary btn-sm">
-                Next &rarr;
+                {{ _('Next') }} &rarr;
             </a>
             {% else %}
             <span></span>
@@ -33,34 +33,34 @@
     <div class="col-md-7">
         <div class="reading-result">
             <h2 class="card-name animate-up delay-1">{{ card['name'] }}</h2>
-            <p class="card-meta animate-up delay-1">Sequence: {{ card['sequence'] }} | Type: {{ card['cardtype']|upper }}</p>
+            <p class="card-meta animate-up delay-1">{{ _('Sequence') }}: {{ card['sequence'] }} | {{ _('Type') }}: {{ card['cardtype']|upper }}</p>
 
             <hr class="border-secondary my-4 animate-up delay-2">
 
             <div class="animate-up delay-2">
-                <h4>Upright Meaning</h4>
+                <h4>{{ _('Upright Meaning') }}</h4>
                 <p>{{ card['desc'] }}</p>
             </div>
 
             <div class="animate-up delay-3">
-                <h4 class="mt-4">Reversed Meaning</h4>
+                <h4 class="mt-4">{{ _('Reversed Meaning') }}</h4>
                 <p>{{ card['rdesc'] }}</p>
             </div>
 
             {% if card['message'] %}
             <div class="animate-up delay-4">
-                <h4 class="mt-4">Core Message</h4>
+                <h4 class="mt-4">{{ _('Core Message') }}</h4>
                 <p>{{ card['message'] }}</p>
             </div>
             {% endif %}
 
             {% if card['qabalah'] %}
-            <h4 class="mt-4">Qabalah Path</h4>
+            <h4 class="mt-4">{{ _('Qabalah Path') }}</h4>
             <p class="text-muted">{{ card['qabalah']|safe }}</p>
             {% endif %}
 
             {% if card['hebrew_letter'] %}
-            <h4 class="mt-4">Hebrew Letter</h4>
+            <h4 class="mt-4">{{ _('Hebrew Letter') }}</h4>
             <p style="font-size: 2rem; color: var(--accent-gold);">{{ card['hebrew_letter']|safe }}</p>
             {% endif %}
 
@@ -70,7 +70,7 @@
             {% endif %}
 
             <div class="mt-5 text-center">
-                <a href="/browse" class="btn btn-outline-gold">Back to Library</a>
+                <a href="/browse" class="btn btn-outline-gold">{{ _('Back to Library') }}</a>
             </div>
         </div>
     </div>

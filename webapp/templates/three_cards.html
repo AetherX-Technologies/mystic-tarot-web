@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}Three Card Spread{% endblock %}
+{% block title %}{{ _('Three Card Spread') }}{% endblock %}
 
 {% block content %}
 <div class="text-center mb-5 animate-up">
-    <h2>TIMELESS SPREAD</h2>
-    <p class="text-secondary">Past · Present · Future</p>
+    <h2>{{ _('TIMELESS SPREAD') }}</h2>
+    <p class="text-secondary">{{ _('Past · Present · Future') }}</p>
 </div>
 
 <div class="row">
@@ -22,16 +22,16 @@
 
             <div class="text-center">
                 <span class="card-position d-block mb-2 text-uppercase" style="font-size: 0.9rem; letter-spacing: 2px; border: none; color: var(--accent-gold);">
-                    {{ reading['position'] }}
+                    {{ _(reading['position']) }}
                 </span>
                 <h3 class="card-name mb-2" style="font-size: 1.8rem;">{{ reading['card']['name'] }}</h3>
                 <p class="card-orientation">
-                    {% if reading['reversed'] %}Reversed{% else %}Upright{% endif %}
+                    {% if reading['reversed'] %}{{ _('Reversed') }}{% else %}{{ _('Upright') }}{% endif %}
                 </p>
             </div>
 
             <hr class="border-secondary my-3">
-            
+
             <div class="card-description">
                 <p>{{ reading['card']['rdesc'] if reading['reversed'] else reading['card']['desc'] }}</p>
             </div>
@@ -41,7 +41,7 @@
 </div>
 
 <div class="text-center mt-5 animate-up delay-3">
-    <a href="/three-cards" class="btn btn-gold me-3">New Reading</a>
-    <a href="/" class="btn btn-outline-gold">Return Home</a>
+    <a href="/three-cards" class="btn btn-gold me-3">{{ _('New Reading') }}</a>
+    <a href="/" class="btn btn-outline-gold">{{ _('Return Home') }}</a>
 </div>
 {% endblock %}

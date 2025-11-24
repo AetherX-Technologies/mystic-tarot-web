@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}Six Card Spread{% endblock %}
+{% block title %}{{ _('Six Card Spread') }}{% endblock %}
 
 {% block content %}
 <div class="text-center mb-5 animate-up">
-    <h2>COMPREHENSIVE ANALYSIS</h2>
-    <p class="text-secondary">Deep dive into your current state and path</p>
+    <h2>{{ _('COMPREHENSIVE ANALYSIS') }}</h2>
+    <p class="text-secondary">{{ _('Deep dive into your current state and path') }}</p>
 </div>
 
 <div class="row">
@@ -18,13 +18,13 @@
                      class="tarot-card-img levitate {% if reading['reversed'] %}reversed{% endif %}"
                      style="max-width: 150px;">
             </div>
-            
-            <p class="card-position text-center w-100">{{ reading['position'] }}</p>
+
+            <p class="card-position text-center w-100">{{ _(reading['position']) }}</p>
             <h4 class="text-center text-white mb-1">{{ reading['card']['name'] }}</h4>
             <p class="card-orientation text-center">
-                {% if reading['reversed'] %}Reversed{% else %}Upright{% endif %}
+                {% if reading['reversed'] %}{{ _('Reversed') }}{% else %}{{ _('Upright') }}{% endif %}
             </p>
-            
+
             <hr class="border-secondary my-3">
             <p class="small text-secondary">{{ reading['card']['rdesc'] if reading['reversed'] else reading['card']['desc'] }}</p>
         </div>
@@ -33,7 +33,7 @@
 </div>
 
 <div class="text-center mt-4 mb-5 animate-up delay-6">
-    <a href="/six-cards" class="btn btn-gold me-3">New Reading</a>
-    <a href="/" class="btn btn-outline-gold">Return Home</a>
+    <a href="/six-cards" class="btn btn-gold me-3">{{ _('New Reading') }}</a>
+    <a href="/" class="btn btn-outline-gold">{{ _('Return Home') }}</a>
 </div>
 {% endblock %}

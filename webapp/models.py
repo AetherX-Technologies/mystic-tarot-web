@@ -5,6 +5,7 @@
 import pandas as pd
 import random
 from pathlib import Path
+from flask_babel import gettext as _
 
 class CardManager:
     """
@@ -114,9 +115,9 @@ class ReadingEngine:
         random.shuffle(orientations)
 
         result = [
-            {'position': 'The Past', 'card': selected[0], 'reversed': orientations[0]},
-            {'position': 'The Present', 'card': selected[1], 'reversed': orientations[1]},
-            {'position': 'The Future', 'card': selected[2], 'reversed': orientations[2]},
+            {'position': _('The Past'), 'card': selected[0], 'reversed': orientations[0]},
+            {'position': _('The Present'), 'card': selected[1], 'reversed': orientations[1]},
+            {'position': _('The Future'), 'card': selected[2], 'reversed': orientations[2]},
         ]
 
         return result
@@ -136,12 +137,12 @@ class ReadingEngine:
         random.shuffle(orientations)
 
         positions = [
-            'How you feel about yourself',
-            'What you want most right now',
-            'Your fears',
-            'What is going for you',
-            'What is going against you',
-            'The likely outcome',
+            _('How you feel about yourself'),
+            _('What you want most right now'),
+            _('Your fears'),
+            _('What is going for you'),
+            _('What is going against you'),
+            _('The likely outcome'),
         ]
 
         result = []

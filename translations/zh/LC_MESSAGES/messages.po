@@ -1,0 +1,304 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-11-24 15:42+0800\n"
+"PO-Revision-Date: 2025-11-24 15:41+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: webapp/models.py:118
+msgid "The Past"
+msgstr "过去"
+
+#: webapp/models.py:119
+msgid "The Present"
+msgstr "现在"
+
+#: webapp/models.py:120
+msgid "The Future"
+msgstr "未来"
+
+#: webapp/models.py:140
+msgid "How you feel about yourself"
+msgstr "你对自己的感受"
+
+#: webapp/models.py:141
+msgid "What you want most right now"
+msgstr "你现在最想要的"
+
+#: webapp/models.py:142
+msgid "Your fears"
+msgstr "你的恐惧"
+
+#: webapp/models.py:143
+msgid "What is going for you"
+msgstr "对你有利的因素"
+
+#: webapp/models.py:144
+msgid "What is going against you"
+msgstr "对你不利的因素"
+
+#: webapp/models.py:145
+msgid "The likely outcome"
+msgstr "可能的结果"
+
+#: webapp/templates/404.html:3 webapp/templates/404.html:8
+msgid "Page Not Found"
+msgstr "页面未找到"
+
+#: webapp/templates/404.html:9
+msgid "Sorry, the page you are looking for does not exist"
+msgstr "抱歉，您访问的页面不存在"
+
+#: webapp/templates/404.html:10 webapp/templates/500.html:10
+#: webapp/templates/one_card.html:55 webapp/templates/six_cards.html:37
+#: webapp/templates/three_cards.html:45
+msgid "Return Home"
+msgstr "返回首页"
+
+#: webapp/templates/500.html:3 webapp/templates/500.html:8
+msgid "Server Error"
+msgstr "服务器错误"
+
+#: webapp/templates/500.html:9
+msgid "Sorry, the server encountered a problem"
+msgstr "抱歉，服务器遇到了问题"
+
+#: webapp/templates/base.html:6
+msgid "Tarot Divination"
+msgstr "塔罗占卜"
+
+#: webapp/templates/base.html:20
+msgid "MYSTIC TAROT"
+msgstr "神秘塔罗"
+
+#: webapp/templates/base.html:26 webapp/templates/index.html:3
+msgid "Home"
+msgstr "首页"
+
+#: webapp/templates/base.html:27
+msgid "Daily Card"
+msgstr "每日一牌"
+
+#: webapp/templates/base.html:28
+msgid "Three Spread"
+msgstr "三牌阵"
+
+#: webapp/templates/base.html:29
+msgid "Six Spread"
+msgstr "六牌阵"
+
+#: webapp/templates/base.html:30
+msgid "Library"
+msgstr "牌库"
+
+#: webapp/templates/base.html:59
+msgid "Mystic Tarot Platform"
+msgstr "神秘塔罗平台"
+
+#: webapp/templates/base.html:59
+msgid "For Entertainment Purposes Only"
+msgstr "仅供娱乐"
+
+#: webapp/templates/browse_cards.html:3 webapp/templates/index.html:47
+msgid "Card Library"
+msgstr "塔罗牌库"
+
+#: webapp/templates/browse_cards.html:7
+msgid "TAROT LIBRARY"
+msgstr "塔罗牌库"
+
+#: webapp/templates/browse_cards.html:8
+msgid "Explore the meanings of all 78 cards"
+msgstr "探索全部78张塔罗牌的含义"
+
+#: webapp/templates/browse_cards.html:14
+msgid "All Cards (78)"
+msgstr "全部卡牌 (78)"
+
+#: webapp/templates/browse_cards.html:17
+msgid "Major Arcana (22)"
+msgstr "大阿尔克那 (22)"
+
+#: webapp/templates/browse_cards.html:20
+msgid "Minor Arcana (56)"
+msgstr "小阿尔克那 (56)"
+
+#: webapp/templates/card_detail.html:3
+msgid "Detail"
+msgstr "详情"
+
+#: webapp/templates/card_detail.html:17
+msgid "Previous"
+msgstr "上一张"
+
+#: webapp/templates/card_detail.html:25
+msgid "Next"
+msgstr "下一张"
+
+#: webapp/templates/card_detail.html:36
+msgid "Sequence"
+msgstr "序号"
+
+#: webapp/templates/card_detail.html:36
+msgid "Type"
+msgstr "类型"
+
+#: webapp/templates/card_detail.html:41
+msgid "Upright Meaning"
+msgstr "正位含义"
+
+#: webapp/templates/card_detail.html:46
+msgid "Reversed Meaning"
+msgstr "逆位含义"
+
+#: webapp/templates/card_detail.html:52 webapp/templates/one_card.html:40
+msgid "Core Message"
+msgstr "核心信息"
+
+#: webapp/templates/card_detail.html:58
+msgid "Qabalah Path"
+msgstr "卡巴拉路径"
+
+#: webapp/templates/card_detail.html:63
+msgid "Hebrew Letter"
+msgstr "希伯来字母"
+
+#: webapp/templates/card_detail.html:73
+msgid "Back to Library"
+msgstr "返回牌库"
+
+#: webapp/templates/index.html:3
+msgid "Mystic Tarot"
+msgstr "神秘塔罗"
+
+#: webapp/templates/index.html:7
+msgid "UNVEIL YOUR DESTINY"
+msgstr "揭开命运的神秘面纱"
+
+#: webapp/templates/index.html:8
+msgid ""
+"Connect with the ancient wisdom of the 78 keys. Seek guidance, find "
+"clarity."
+msgstr "连接78张钥匙的古老智慧，寻求指引，找到清晰。"
+
+#: webapp/templates/index.html:16 webapp/templates/one_card.html:3
+msgid "Daily Insight"
+msgstr "每日洞察"
+
+#: webapp/templates/index.html:17
+msgid ""
+"Draw a single card for daily guidance or a quick answer to a simple "
+"question."
+msgstr "抽取一张牌获得每日指引，或快速解答简单问题。"
+
+#: webapp/templates/index.html:18
+msgid "Draw Card"
+msgstr "抽牌"
+
+#: webapp/templates/index.html:26
+msgid "Past, Present, Future"
+msgstr "过去、现在、未来"
+
+#: webapp/templates/index.html:27
+msgid ""
+"Explore the timeline of your situation. Understand the roots and "
+"potential outcomes."
+msgstr "探索你处境的时间线，理解根源和潜在结果。"
+
+#: webapp/templates/index.html:28
+msgid "Begin Spread"
+msgstr "开始占卜"
+
+#: webapp/templates/index.html:36
+msgid "Comprehensive Analysis"
+msgstr "综合分析"
+
+#: webapp/templates/index.html:37
+msgid ""
+"A detailed six-card spread covering subconscious influences and future "
+"advice."
+msgstr "详细的六牌阵，涵盖潜意识影响和未来建议。"
+
+#: webapp/templates/index.html:38
+msgid "Deep Dive"
+msgstr "深入探索"
+
+#: webapp/templates/index.html:48
+msgid "Study the symbolism and meanings of all 78 Tarot cards."
+msgstr "学习全部78张塔罗牌的象征和含义。"
+
+#: webapp/templates/index.html:50
+msgid "Browse Gallery"
+msgstr "浏览图库"
+
+#: webapp/templates/one_card.html:7
+msgid "DAILY INSIGHT"
+msgstr "每日洞察"
+
+#: webapp/templates/one_card.html:8
+msgid "Your guiding light for the day"
+msgstr "你今天的指引之光"
+
+#: webapp/templates/one_card.html:24 webapp/templates/six_cards.html:25
+#: webapp/templates/three_cards.html:29
+msgid "Reversed"
+msgstr "逆位"
+
+#: webapp/templates/one_card.html:26 webapp/templates/six_cards.html:25
+#: webapp/templates/three_cards.html:29
+msgid "Upright"
+msgstr "正位"
+
+#: webapp/templates/one_card.html:34
+msgid "Interpretation"
+msgstr "解释"
+
+#: webapp/templates/one_card.html:47
+msgid "Meditation"
+msgstr "冥想"
+
+#: webapp/templates/one_card.html:54
+msgid "Draw Again"
+msgstr "再次抽牌"
+
+#: webapp/templates/six_cards.html:3
+msgid "Six Card Spread"
+msgstr "六牌占卜"
+
+#: webapp/templates/six_cards.html:7
+msgid "COMPREHENSIVE ANALYSIS"
+msgstr "综合分析"
+
+#: webapp/templates/six_cards.html:8
+msgid "Deep dive into your current state and path"
+msgstr "深入了解你的当前状态和路径"
+
+#: webapp/templates/six_cards.html:36 webapp/templates/three_cards.html:44
+msgid "New Reading"
+msgstr "新的占卜"
+
+#: webapp/templates/three_cards.html:3
+msgid "Three Card Spread"
+msgstr "三牌占卜"
+
+#: webapp/templates/three_cards.html:7
+msgid "TIMELESS SPREAD"
+msgstr "永恒牌阵"
+
+#: webapp/templates/three_cards.html:8
+msgid "Past · Present · Future"
+msgstr "过去 · 现在 · 未来"
+

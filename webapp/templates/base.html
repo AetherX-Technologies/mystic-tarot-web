@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Tarot Divination{% endblock %}</title>
+    <title>{% block title %}{{ _('Tarot Divination') }}{% endblock %}</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -17,17 +17,33 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/">MYSTIC TAROT</a>
+            <a class="navbar-brand" href="/">{{ _('MYSTIC TAROT') }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/one-card">Daily Card</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/three-cards">Three Spread</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/six-cards">Six Spread</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/browse">Library</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">{{ _('Home') }}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/one-card">{{ _('Daily Card') }}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/three-cards">{{ _('Three Spread') }}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/six-cards">{{ _('Six Spread') }}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/browse">{{ _('Library') }}</a></li>
+
+                    <!-- Language Switcher -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="lang-switch-icon">🌐</span>
+                            {% if session.get('language', 'en') == 'zh' %}
+                                中文
+                            {% else %}
+                                English
+                            {% endif %}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item {% if session.get('language', 'en') == 'en' %}active{% endif %}" href="{{ url_for('main.set_language', lang='en') }}">English</a></li>
+                            <li><a class="dropdown-item {% if session.get('language', 'en') == 'zh' %}active{% endif %}" href="{{ url_for('main.set_language', lang='zh') }}">中文</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -40,7 +56,7 @@
 
     <!-- Footer -->
     <footer class="text-center">
-        <p class="mb-0">&copy; 2025 Mystic Tarot Platform | For Entertainment Purposes Only</p>
+        <p class="mb-0">&copy; 2025 {{ _('Mystic Tarot Platform') }} | {{ _('For Entertainment Purposes Only') }}</p>
     </footer>
 
     <!-- Bootstrap JS -->

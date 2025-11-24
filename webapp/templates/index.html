@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}Home - Mystic Tarot{% endblock %}
+{% block title %}{{ _('Home') }} - {{ _('Mystic Tarot') }}{% endblock %}
 
 {% block content %}
 <div class="hero-section animate-up">
-    <h1 class="hero-title">UNVEIL YOUR DESTINY</h1>
-    <p class="hero-subtitle">Connect with the ancient wisdom of the 78 keys. Seek guidance, find clarity.</p>
+    <h1 class="hero-title">{{ _('UNVEIL YOUR DESTINY') }}</h1>
+    <p class="hero-subtitle">{{ _('Connect with the ancient wisdom of the 78 keys. Seek guidance, find clarity.') }}</p>
 </div>
 
 <div class="row g-4">
@@ -13,9 +13,9 @@
     <div class="col-md-4 animate-up delay-1">
         <a href="/one-card" class="option-card d-block">
             <div class="option-icon">I</div>
-            <h3 class="option-title">Daily Insight</h3>
-            <p class="option-desc">Draw a single card for daily guidance or a quick answer to a simple question.</p>
-            <span class="btn-gold">Draw Card</span>
+            <h3 class="option-title">{{ _('Daily Insight') }}</h3>
+            <p class="option-desc">{{ _('Draw a single card for daily guidance or a quick answer to a simple question.') }}</p>
+            <span class="btn-gold">{{ _('Draw Card') }}</span>
         </a>
     </div>
 
@@ -23,9 +23,9 @@
     <div class="col-md-4 animate-up delay-2">
         <a href="/three-cards" class="option-card d-block">
             <div class="option-icon">III</div>
-            <h3 class="option-title">Past, Present, Future</h3>
-            <p class="option-desc">Explore the timeline of your situation. Understand the roots and potential outcomes.</p>
-            <span class="btn-gold">Begin Spread</span>
+            <h3 class="option-title">{{ _('Past, Present, Future') }}</h3>
+            <p class="option-desc">{{ _('Explore the timeline of your situation. Understand the roots and potential outcomes.') }}</p>
+            <span class="btn-gold">{{ _('Begin Spread') }}</span>
         </a>
     </div>
 
@@ -33,9 +33,9 @@
     <div class="col-md-4 animate-up delay-3">
         <a href="/six-cards" class="option-card d-block">
             <div class="option-icon">VI</div>
-            <h3 class="option-title">Comprehensive Analysis</h3>
-            <p class="option-desc">A detailed six-card spread covering subconscious influences and future advice.</p>
-            <span class="btn-gold">Deep Dive</span>
+            <h3 class="option-title">{{ _('Comprehensive Analysis') }}</h3>
+            <p class="option-desc">{{ _('A detailed six-card spread covering subconscious influences and future advice.') }}</p>
+            <span class="btn-gold">{{ _('Deep Dive') }}</span>
         </a>
     </div>
 </div>
@@ -44,10 +44,10 @@
     <div class="col-12 animate-up delay-4">
         <a href="/browse" class="option-card d-block" style="display: flex !important; align-items: center; justify-content: center; gap: 20px;">
             <div class="text-start">
-                <h3 class="option-title mb-2">Card Library</h3>
-                <p class="option-desc mb-0">Study the symbolism and meanings of all 78 Tarot cards.</p>
+                <h3 class="option-title mb-2">{{ _('Card Library') }}</h3>
+                <p class="option-desc mb-0">{{ _('Study the symbolism and meanings of all 78 Tarot cards.') }}</p>
             </div>
-            <span class="btn-outline-gold">Browse Gallery</span>
+            <span class="btn-outline-gold">{{ _('Browse Gallery') }}</span>
         </a>
     </div>
 </div>

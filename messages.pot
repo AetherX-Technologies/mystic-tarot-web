@@ -1,0 +1,303 @@
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-11-24 15:42+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: webapp/models.py:118
+msgid "The Past"
+msgstr ""
+
+#: webapp/models.py:119
+msgid "The Present"
+msgstr ""
+
+#: webapp/models.py:120
+msgid "The Future"
+msgstr ""
+
+#: webapp/models.py:140
+msgid "How you feel about yourself"
+msgstr ""
+
+#: webapp/models.py:141
+msgid "What you want most right now"
+msgstr ""
+
+#: webapp/models.py:142
+msgid "Your fears"
+msgstr ""
+
+#: webapp/models.py:143
+msgid "What is going for you"
+msgstr ""
+
+#: webapp/models.py:144
+msgid "What is going against you"
+msgstr ""
+
+#: webapp/models.py:145
+msgid "The likely outcome"
+msgstr ""
+
+#: webapp/templates/404.html:3 webapp/templates/404.html:8
+msgid "Page Not Found"
+msgstr ""
+
+#: webapp/templates/404.html:9
+msgid "Sorry, the page you are looking for does not exist"
+msgstr ""
+
+#: webapp/templates/404.html:10 webapp/templates/500.html:10
+#: webapp/templates/one_card.html:55 webapp/templates/six_cards.html:37
+#: webapp/templates/three_cards.html:45
+msgid "Return Home"
+msgstr ""
+
+#: webapp/templates/500.html:3 webapp/templates/500.html:8
+msgid "Server Error"
+msgstr ""
+
+#: webapp/templates/500.html:9
+msgid "Sorry, the server encountered a problem"
+msgstr ""
+
+#: webapp/templates/base.html:6
+msgid "Tarot Divination"
+msgstr ""
+
+#: webapp/templates/base.html:20
+msgid "MYSTIC TAROT"
+msgstr ""
+
+#: webapp/templates/base.html:26 webapp/templates/index.html:3
+msgid "Home"
+msgstr ""
+
+#: webapp/templates/base.html:27
+msgid "Daily Card"
+msgstr ""
+
+#: webapp/templates/base.html:28
+msgid "Three Spread"
+msgstr ""
+
+#: webapp/templates/base.html:29
+msgid "Six Spread"
+msgstr ""
+
+#: webapp/templates/base.html:30
+msgid "Library"
+msgstr ""
+
+#: webapp/templates/base.html:59
+msgid "Mystic Tarot Platform"
+msgstr ""
+
+#: webapp/templates/base.html:59
+msgid "For Entertainment Purposes Only"
+msgstr ""
+
+#: webapp/templates/browse_cards.html:3 webapp/templates/index.html:47
+msgid "Card Library"
+msgstr ""
+
+#: webapp/templates/browse_cards.html:7
+msgid "TAROT LIBRARY"
+msgstr ""
+
+#: webapp/templates/browse_cards.html:8
+msgid "Explore the meanings of all 78 cards"
+msgstr ""
+
+#: webapp/templates/browse_cards.html:14
+msgid "All Cards (78)"
+msgstr ""
+
+#: webapp/templates/browse_cards.html:17
+msgid "Major Arcana (22)"
+msgstr ""
+
+#: webapp/templates/browse_cards.html:20
+msgid "Minor Arcana (56)"
+msgstr ""
+
+#: webapp/templates/card_detail.html:3
+msgid "Detail"
+msgstr ""
+
+#: webapp/templates/card_detail.html:17
+msgid "Previous"
+msgstr ""
+
+#: webapp/templates/card_detail.html:25
+msgid "Next"
+msgstr ""
+
+#: webapp/templates/card_detail.html:36
+msgid "Sequence"
+msgstr ""
+
+#: webapp/templates/card_detail.html:36
+msgid "Type"
+msgstr ""
+
+#: webapp/templates/card_detail.html:41
+msgid "Upright Meaning"
+msgstr ""
+
+#: webapp/templates/card_detail.html:46
+msgid "Reversed Meaning"
+msgstr ""
+
+#: webapp/templates/card_detail.html:52 webapp/templates/one_card.html:40
+msgid "Core Message"
+msgstr ""
+
+#: webapp/templates/card_detail.html:58
+msgid "Qabalah Path"
+msgstr ""
+
+#: webapp/templates/card_detail.html:63
+msgid "Hebrew Letter"
+msgstr ""
+
+#: webapp/templates/card_detail.html:73
+msgid "Back to Library"
+msgstr ""
+
+#: webapp/templates/index.html:3
+msgid "Mystic Tarot"
+msgstr ""
+
+#: webapp/templates/index.html:7
+msgid "UNVEIL YOUR DESTINY"
+msgstr ""
+
+#: webapp/templates/index.html:8
+msgid ""
+"Connect with the ancient wisdom of the 78 keys. Seek guidance, find "
+"clarity."
+msgstr ""
+
+#: webapp/templates/index.html:16 webapp/templates/one_card.html:3
+msgid "Daily Insight"
+msgstr ""
+
+#: webapp/templates/index.html:17
+msgid ""
+"Draw a single card for daily guidance or a quick answer to a simple "
+"question."
+msgstr ""
+
+#: webapp/templates/index.html:18
+msgid "Draw Card"
+msgstr ""
+
+#: webapp/templates/index.html:26
+msgid "Past, Present, Future"
+msgstr ""
+
+#: webapp/templates/index.html:27
+msgid ""
+"Explore the timeline of your situation. Understand the roots and "
+"potential outcomes."
+msgstr ""
+
+#: webapp/templates/index.html:28
+msgid "Begin Spread"
+msgstr ""
+
+#: webapp/templates/index.html:36
+msgid "Comprehensive Analysis"
+msgstr ""
+
+#: webapp/templates/index.html:37
+msgid ""
+"A detailed six-card spread covering subconscious influences and future "
+"advice."
+msgstr ""
+
+#: webapp/templates/index.html:38
+msgid "Deep Dive"
+msgstr ""
+
+#: webapp/templates/index.html:48
+msgid "Study the symbolism and meanings of all 78 Tarot cards."
+msgstr ""
+
+#: webapp/templates/index.html:50
+msgid "Browse Gallery"
+msgstr ""
+
+#: webapp/templates/one_card.html:7
+msgid "DAILY INSIGHT"
+msgstr ""
+
+#: webapp/templates/one_card.html:8
+msgid "Your guiding light for the day"
+msgstr ""
+
+#: webapp/templates/one_card.html:24 webapp/templates/six_cards.html:25
+#: webapp/templates/three_cards.html:29
+msgid "Reversed"
+msgstr ""
+
+#: webapp/templates/one_card.html:26 webapp/templates/six_cards.html:25
+#: webapp/templates/three_cards.html:29
+msgid "Upright"
+msgstr ""
+
+#: webapp/templates/one_card.html:34
+msgid "Interpretation"
+msgstr ""
+
+#: webapp/templates/one_card.html:47
+msgid "Meditation"
+msgstr ""
+
+#: webapp/templates/one_card.html:54
+msgid "Draw Again"
+msgstr ""
+
+#: webapp/templates/six_cards.html:3
+msgid "Six Card Spread"
+msgstr ""
+
+#: webapp/templates/six_cards.html:7
+msgid "COMPREHENSIVE ANALYSIS"
+msgstr ""
+
+#: webapp/templates/six_cards.html:8
+msgid "Deep dive into your current state and path"
+msgstr ""
+
+#: webapp/templates/six_cards.html:36 webapp/templates/three_cards.html:44
+msgid "New Reading"
+msgstr ""
+
+#: webapp/templates/three_cards.html:3
+msgid "Three Card Spread"
+msgstr ""
+
+#: webapp/templates/three_cards.html:7
+msgid "TIMELESS SPREAD"
+msgstr ""
+
+#: webapp/templates/three_cards.html:8
+msgid "Past · Present · Future"
+msgstr ""
+

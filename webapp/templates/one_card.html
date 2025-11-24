@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}Daily Insight{% endblock %}
+{% block title %}{{ _('Daily Insight') }}{% endblock %}
 
 {% block content %}
 <div class="text-center mb-5 animate-up">
-    <h2>DAILY INSIGHT</h2>
-    <p class="text-secondary">Your guiding light for the day</p>
+    <h2>{{ _('DAILY INSIGHT') }}</h2>
+    <p class="text-secondary">{{ _('Your guiding light for the day') }}</p>
 </div>
 
 <div class="row justify-content-center">
@@ -21,9 +21,9 @@
             <h3 class="card-name animate-up delay-1">{{ card['name'] }}</h3>
             <p class="card-orientation animate-up delay-1">
                 {% if reversed %}
-                    Reversed
+                    {{ _('Reversed') }}
                 {% else %}
-                    Upright
+                    {{ _('Upright') }}
                 {% endif %}
             </p>
 
@@ -31,28 +31,28 @@
 
             <div class="text-start px-md-5">
                 <div class="animate-up delay-2">
-                    <h4>Interpretation</h4>
+                    <h4>{{ _('Interpretation') }}</h4>
                     <p>{{ card['rdesc'] if reversed else card['desc'] }}</p>
                 </div>
 
                 {% if card['message'] %}
                 <div class="animate-up delay-3">
-                    <h4 class="mt-4">Core Message</h4>
+                    <h4 class="mt-4">{{ _('Core Message') }}</h4>
                     <p>{{ card['message'] }}</p>
                 </div>
                 {% endif %}
 
                 {% if card['meditation'] and card['sequence'] != 15 %}
                 <div class="animate-up delay-4">
-                    <h4 class="mt-4">Meditation</h4>
+                    <h4 class="mt-4">{{ _('Meditation') }}</h4>
                     <p class="text-muted"><em>"{{ card['meditation'] }}"</em></p>
                 </div>
                 {% endif %}
             </div>
 
             <div class="mt-5">
-                <a href="/one-card" class="btn btn-gold me-3">Draw Again</a>
-                <a href="/" class="btn btn-outline-gold">Return Home</a>
+                <a href="/one-card" class="btn btn-gold me-3">{{ _('Draw Again') }}</a>
+                <a href="/" class="btn btn-outline-gold">{{ _('Return Home') }}</a>
             </div>
         </div>
     </div>

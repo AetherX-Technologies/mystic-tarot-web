@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %}Card Library{% endblock %}
+{% block title %}{{ _('Card Library') }}{% endblock %}
 
 {% block content %}
 <div class="text-center mb-5">
-    <h2>TAROT LIBRARY</h2>
-    <p class="text-secondary">Explore the meanings of all 78 cards</p>
+    <h2>{{ _('TAROT LIBRARY') }}</h2>
+    <p class="text-secondary">{{ _('Explore the meanings of all 78 cards') }}</p>
 </div>
 
 <!-- Categories -->
 <ul class="nav nav-tabs mb-4 justify-content-center" id="cardTypeTabs" role="tablist">
     <li class="nav-item">
-        <a class="nav-link active" data-bs-toggle="tab" href="#all">All Cards (78)</a>
+        <a class="nav-link active" data-bs-toggle="tab" href="#all">{{ _('All Cards (78)') }}</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" href="#major">Major Arcana (22)</a>
+        <a class="nav-link" data-bs-toggle="tab" href="#major">{{ _('Major Arcana (22)') }}</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" href="#minor">Minor Arcana (56)</a>
+        <a class="nav-link" data-bs-toggle="tab" href="#minor">{{ _('Minor Arcana (56)') }}</a>
     </li>
 </ul>
 

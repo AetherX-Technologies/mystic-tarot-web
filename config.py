@@ -17,10 +17,16 @@ class Config:
     # 数据文件路径
     DATA_DIR = BASE_DIR / 'data'
     CARDS_CSV = DATA_DIR / 'TarotCards_Full.csv'
+    CARDS_CSV_ZH = DATA_DIR / 'tarot_chinese.csv'
 
     # 静态资源
     STATIC_FOLDER = 'static'
     TEMPLATE_FOLDER = 'templates'
+
+    # Babel国际化配置
+    BABEL_DEFAULT_LOCALE = 'en'
+    BABEL_SUPPORTED_LOCALES = ['en', 'zh']
+    BABEL_TRANSLATION_DIRECTORIES = str(BASE_DIR / 'translations')
 
 class DevelopmentConfig(Config):
     """开发环境配置"""

@@ -21,7 +21,8 @@
       "WebFetch(domain:www.learntarot.com)",
       "Bash(git remote add:*)",
       "Bash(git push:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}500 - 服务器错误{% endblock %}
+{% block title %}500 - {{ _('Server Error') }}{% endblock %}
 
 {% block content %}
 <div class="text-center">
     <h1 style="font-size: 5rem;">500</h1>
-    <h3>服务器错误</h3>
-    <p class="lead">抱歉，服务器遇到了问题</p>
-    <a href="/" class="btn btn-primary">返回首页</a>
+    <h3>{{ _('Server Error') }}</h3>
+    <p class="lead">{{ _('Sorry, the server encountered a problem') }}</p>
+    <a href="/" class="btn btn-primary">{{ _('Return Home') }}</a>
 </div>
 {% endblock %}

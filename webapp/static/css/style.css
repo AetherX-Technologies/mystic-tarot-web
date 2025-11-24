@@ -60,6 +60,13 @@ a {
     margin-left: 1.5rem;
 }
 
+/* Language switcher icon alignment */
+.lang-switch-icon {
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-right: 0.35rem;
+}
+
 .nav-link:hover {
     color: var(--text-primary) !important;
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
