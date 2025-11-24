@@ -33,15 +33,15 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="lang-switch-icon">🌐</span>
-                            {% if session.get('language', 'en') == 'zh' %}
+                            {% if current_lang == 'zh' %}
                                 中文
                             {% else %}
                                 English
                             {% endif %}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item {% if session.get('language', 'en') == 'en' %}active{% endif %}" href="{{ url_for('main.set_language', lang='en') }}">English</a></li>
-                            <li><a class="dropdown-item {% if session.get('language', 'en') == 'zh' %}active{% endif %}" href="{{ url_for('main.set_language', lang='zh') }}">中文</a></li>
+                            <li><a class="dropdown-item {% if current_lang == 'en' %}active{% endif %}" href="{{ url_for('main.set_language', lang='en') }}">English</a></li>
+                            <li><a class="dropdown-item {% if current_lang == 'zh' %}active{% endif %}" href="{{ url_for('main.set_language', lang='zh') }}">中文</a></li>
                         </ul>
                     </li>
                 </ul>

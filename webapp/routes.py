@@ -36,6 +36,9 @@ def _get_current_language():
     lang = session.get('language')
     if lang in ['en', 'zh']:
         return lang
+    best_lang = request.accept_languages.best_match(['en', 'zh'])
+    if best_lang in ['en', 'zh']:
+        return best_lang
     return 'en'
 
 
@@ -51,6 +54,11 @@ def _get_reading_engine():
     if lang == 'zh' and reading_engine_zh is not None:
         return reading_engine_zh
     return reading_engine_en
+
+
+@main_bp.context_processor
+def inject_current_lang():
+    return {'current_lang': _get_current_language()}
 
 
 @main_bp.route('/')
