@@ -11,17 +11,52 @@
     --accent-hover: #f1c40f;
     --card-bg: rgba(20, 20, 20, 0.8);
     --border-color: rgba(212, 175, 55, 0.3);
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Crimson Text', serif;
+
+    /* Glassmorphism & Glow */
+    --glass-bg: rgba(20, 20, 20, 0.6);
+    --glass-border: rgba(212, 175, 55, 0.15);
+    --text-glow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #333, var(--accent-gold));
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-gold);
 }
 
 /* Global Reset */
 body {
-    font-family: 'Georgia', 'Times New Roman', serif; /* Classic serif for mystique */
-    background: radial-gradient(circle at top center, var(--bg-gradient-start), var(--bg-gradient-end));
-    background-attachment: fixed;
+    font-family: var(--font-body);
+    background: #0a0a0a url('../images/ui/background.png') center/cover fixed no-repeat;
     color: var(--text-primary);
     min-height: 100vh;
     margin: 0;
     line-height: 1.6;
+    position: relative;
+}
+
+/* Vignette Overlay (Spotlight Effect) */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.85) 100%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,25 +73,26 @@ a {
 
 /* Navbar */
 .navbar {
-    background: rgba(0, 0, 0, 0.9) !important;
-    border-bottom: 1px solid var(--border-color);
+    background: transparent !important;
+    border-bottom: none;
     padding: 1rem 0;
 }
 
-.navbar-brand {
+.mystic-navbar .navbar-brand {
     color: var(--accent-gold) !important;
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: var(--font-title);
 }
 
-.nav-link {
+.mystic-navbar .nav-link {
     color: var(--text-secondary) !important;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: var(--font-title);
     text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
     margin-left: 1.5rem;
 }
 
@@ -70,6 +106,15 @@ a {
 .nav-link:hover {
     color: var(--text-primary) !important;
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Main framed viewport */
+.main-viewport {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+    position: relative;
+    box-sizing: border-box;
 }
 
 /* Hero Section */
@@ -170,17 +215,47 @@ a {
 
 /* Reading Results */
 .reading-result {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background: transparent;
+    border: none;
     padding: 3rem;
     border-radius: 4px;
     margin-bottom: 3rem;
 }
 
+
+.parchment-box {
+    background: url('../images/ui/parchment.png') center/cover no-repeat;
+    padding: 2.5rem 3rem;
+    border-radius: 8px;
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.65),          /* 柔和下方暗影，增加厚度 */
+        0 0 55px rgba(212, 175, 55, 0.2),          /* 四周暖色 halo，淡且无硬边 */
+        inset 0 0 40px rgba(44, 24, 16, 0.22);     /* 轻微内阴影，突出纸张纹理 */
+    color: #2c1810;
+    position: relative;
+}
+
+.parchment-box.parchment-tall {
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+    min-height: 820px;
+    margin-top: -3rem;
+}
+
+.parchment-box p {
+    color: #2c1810;
+}
+
+.parchment-box .card-position {
+    color: #5a341c;
+    font-weight: 600;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+}
+
 .tarot-card-img {
     border-radius: 8px;
-    border: 2px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 3px solid rgba(212, 175, 55, 0.9);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
     transition: transform 0.5s ease;
     width: 100%;
     max-width: 300px;
@@ -340,4 +415,19 @@ p {
 /* We use animate-up as the base, but ensure elements have a starting state */
 .animate-up {
     opacity: 0; /* Ensure hidden before animation starts */
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        opacity: 0.9;
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.6), 0 0 40px rgba(212, 175, 55, 0.2);
+        opacity: 1;
+    }
+}
+
+.hero-title {
+    animation: pulse-glow 3s infinite ease-in-out;
 }

@@ -19,14 +19,16 @@
                      style="max-width: 150px;">
             </div>
 
-            <p class="card-position text-center w-100">{{ _(reading['position']) }}</p>
-            <h4 class="text-center text-white mb-1">{{ reading['card']['name'] }}</h4>
-            <p class="card-orientation text-center">
-                {% if reading['reversed'] %}{{ _('Reversed') }}{% else %}{{ _('Upright') }}{% endif %}
-            </p>
+            <div class="parchment-box">
+                <p class="card-position text-center w-100">{{ _(reading['position']) }}</p>
+                <h4 class="text-center mb-1">{{ reading['card']['name'] }}</h4>
+                <p class="card-orientation text-center">
+                    {% if reading['reversed'] %}{{ _('Reversed') }}{% else %}{{ _('Upright') }}{% endif %}
+                </p>
 
-            <hr class="border-secondary my-3">
-            <p class="small text-secondary">{{ reading['card']['rdesc'] if reading['reversed'] else reading['card']['desc'] }}</p>
+                <hr class="border-secondary my-3">
+                <p>{{ reading['card']['rdesc'] if reading['reversed'] else reading['card']['desc'] }}</p>
+            </div>
         </div>
     </div>
     {% endfor %}
