@@ -222,6 +222,11 @@ a {
     margin-bottom: 3rem;
 }
 
+/* Card Detail page: make parchment area wider */
+.card-detail-layout .reading-result {
+    padding: 2rem 1rem 2.5rem;
+}
+
 
 .parchment-box {
     background: url('../images/ui/parchment.png') center/cover no-repeat;
@@ -240,6 +245,27 @@ a {
     padding-bottom: 5rem;
     min-height: 820px;
     margin-top: -3rem;
+}
+
+/* Card Detail page: slightly adjust tall parchment padding on desktop */
+.card-detail-layout .parchment-box.parchment-tall {
+    padding-top: 3rem;
+    padding-bottom: 5.5rem;
+}
+
+@media (max-width: 576px) {
+    .parchment-box.parchment-tall {
+        padding: 2rem 1.5rem 3rem;
+        min-height: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Card Detail page on tablets / narrow windows / phones */
+    .card-detail-layout .parchment-box.parchment-tall {
+        padding: 2.5rem 1.5rem 6rem;
+        min-height: 0;
+    }
 }
 
 .parchment-box p {

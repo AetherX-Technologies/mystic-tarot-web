@@ -3,7 +3,7 @@
 {% block title %}{{ card['name'] }} - {{ _('Detail') }}{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
+<div class="row justify-content-center card-detail-layout">
     <div class="col-md-4 text-center">
         <img src="{{ url_for('static', filename=card['image']) }}"
              alt="{{ card['name'] }}"
